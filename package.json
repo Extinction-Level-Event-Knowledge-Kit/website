@@ -10,8 +10,11 @@
   },
   "devDependencies": {
     "@nuxt/typescript-runtime": "^3.0.0",
+    "autoprefixer": "^10.4.14",
     "nuxt": "^3.3.2",
-    "prettier": "^2.8.7"
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.7",
+    "tailwindcss": "^3.2.7"
   },
   "dependencies": {
     "@types/node": "^18.15.10",

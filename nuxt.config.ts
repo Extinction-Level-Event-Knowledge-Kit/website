@@ -7,6 +7,13 @@ export default defineNuxtConfig({
             primary: '#ff0000',
         }
     },
+    runtimeConfig: {
+        public: {
+            apiBase: process.env.API_BASE,
+            apiClientId: process.env.API_CLIENT_ID,
+            apiClientSecret: process.env.API_CLIENT_SECRET,
+        }
+    },
     typescript: {
         strict: true,
     },
@@ -14,11 +21,15 @@ export default defineNuxtConfig({
         '@nuxt/typescript-build',
         '@nuxtjs/composition-api/module',
     ],
-    runtimeConfig: {
-        public: {
-            apiBase: process.env.API_BASE,
-            apiClientId: process.env.API_CLIENT_ID,
-            apiClientSecret: process.env.API_CLIENT_SECRET,
+    css: [ '~/assets/css/tailwind.css' ],
+    build: {
+        postcss: {
+            postcssOptions: {
+                plugins: {
+                    tailwindcss: {},
+                    autoprefixer: {},
+                }
+            }
         }
     }
 })
