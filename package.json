@@ -10,5 +10,9 @@
   },
   "devDependencies": {
     "nuxt": "^3.3.2"
+  },
+  "dependencies": {
+    "@types/node": "^18.15.10",
+    "vue-tsc": "^1.2.0"
   }
 }
